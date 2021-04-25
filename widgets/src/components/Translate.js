@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Dropdown from './Dropdown';
+import Converter from './Converter';
 
-const key = 'AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM';
 const options = [
     { 
         label: 'African',
@@ -37,6 +37,10 @@ const Translate = () => {
                     <label>Enter text</label>
                     <input value={text} onChange={(e) => setText(e.target.value)}/>
                 </div>
+            </div>
+            <br/>
+            <div className='ui header'>
+                <Converter language={selectedOption} text = {text} />
             </div>
         </div>
     )
