@@ -17,10 +17,10 @@ const Converter = ({language, text}) => {
     }, [text])
 
     useEffect(()=>{
-        const convertText = async() =>  {
+        const convertText = async () =>  {
             const { data } = await axios.post('https://translation.googleapis.com/language/translate/v2', {}, {
             params: {
-                q: text,
+                q: debounceText,
                 target: language.value,
                 key: key
             }

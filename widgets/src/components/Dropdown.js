@@ -11,7 +11,7 @@ const Dropdown = ({label, options, selectedOption, setSelectedOption}) => {
             setOpen(false);
         };
         document.body.addEventListener('click',onBodyClick)
-        return () =>  document.body.removeEventListener('click', onBodyClick);
+        return () =>  {document.body.removeEventListener('click', onBodyClick)};
     }, [])
 
     const renderList = options.map((data, index) => {
